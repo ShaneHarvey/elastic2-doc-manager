@@ -6,9 +6,10 @@ python:
   - 3.4
   - 3.5
 
+before_install:
+  - java install oraclejdk8
+
 install:
-  - sudo -E apt-get -yq update
-  - sudo -E apt-get -yq --no-install-suggests --no-install-recommends --force-yes install oracle-java8-installer oracle-java8-set-default
   - java -Xmx32m -version
   - pip install --upgrade setuptools
   - pip install mongo-orchestration
