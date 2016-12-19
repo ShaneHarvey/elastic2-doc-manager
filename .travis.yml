@@ -42,6 +42,8 @@ install:
   - mongod --version
   - # Install MongoOrchestration
   - pip install "mongo-orchestration>=0.6.7,<1.0"
+  - # Install MongoConnector dev
+  - pip install --upgrade https://github.com/mongodb-labs/mongo-connector/archive/master.zip
 
 before_script:
   - elasticsearch > temp.txt &
